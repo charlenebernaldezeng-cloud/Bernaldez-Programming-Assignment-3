@@ -2,6 +2,7 @@
 This repository contains my solutions for Experiment 3: Python Data Analysis (Pandas)
 
 The programming assignment contains three Experiment Problems:
+
 A.) Positional and label-based slicing
 - In this problem, the code imports Pandas and reads the given cars.csv file into a DataFrame called cars. It checks the data's shape to show the number of rows and columns and displays the column names. Afterward, cars.iloc[5:10] selects rows 6 to 10 by position. Lastly, the code displays only the selected columns: Model, mpg, cycl, hp, and gear.
   
