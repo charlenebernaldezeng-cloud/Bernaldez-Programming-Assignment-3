@@ -38,6 +38,8 @@ This repository features Python-based solutions for Experiment 3: Python Data An
 ### A. Positional and Label-Based Slicing
 * *Description:* Loads the dataset, displays the shape and column names, extracts rows 6 through 10 using positional slicing (`iloc`), and then displays specific columns (`Model`, `mpg`, `cyl`, `hp`, `gear`) using label-based indexing[cite: 1].
 
+code:
+
       # Display shape of cars
       print('Shape of cars: ')
       cars = pd.read_csv('cars.csv')
@@ -58,6 +60,8 @@ This repository features Python-based solutions for Experiment 3: Python Data An
 ### B. Model Lookup
 * *Description:* Uses Boolean indexing on the Model column to locate specific vehicles and extract their data into separate variables without using hard-coded row numbers.
 
+code:
+
       # Display complete row for Toyota Corolla
       print('Toyota Corolla: ' )
       toyota = cars[cars['Model'] == 'Toyota Corolla'] 
@@ -72,6 +76,8 @@ This repository features Python-based solutions for Experiment 3: Python Data An
 ### C. Multi-Model Subsetting
 * *Description:* Creates a new DataFrame containing only the records for Datsun 710, Lotus Europa, and Ferrari Dino. Retains only the columns Model, mpg, cyl, hp, and gear, and verifies the shape of the resulting subset.
 
+code:
+
       # Select rows for the three specified car models 
       selected_cars = cars[cars['Model'].isin(['Datsun 710', 'Lotus Europa', 'Ferrari Dino'])][['Model', 'mpg', 'cyl', 'hp', 'gear']]
 
@@ -82,4 +88,37 @@ This repository features Python-based solutions for Experiment 3: Python Data An
       print('\nShape of selected_cars:') 
       print(selected_cars.shape)
 
-  
+## Project File Structure
+```text
+Bernaldez---Programming-Assignment-3/
+│
+├── ECE2112_PA3.ipynb       # Main Jupyter Notebook containing Pandas solutions
+└── cars.csv                # Source dataset for the experiment
+└── README.md               # Project documentation
+```
+## How to Run
+### Using Terminal / Command Prompt
+1. Clone or download the repository to your local machine.
+2. 6. Ensure that your `cars.csv` dataset is saved in the exact same directory as your notebook.
+3. Open your terminal or command prompt and navigate to the project directory:
+   ```bash
+   git clone [https://github.com/charlenebernaldezeng-cloud/Bernaldez-Programming-Assignment-3.git](https://github.com/charlenebernaldezeng-cloud/Bernaldez-Programming-Assignment-3.git)
+   cd Bernaldez-Programming-Assignment-3
+
+4. Launch Jupyter Notebook:
+   ```bash
+   jupyter notebook
+
+5. Open `ECE2112_PA1=3.ipynb` from the browser interface and run all cells sequentially (`Cell > Run All`).
+
+### Using Jupyter Notebook / VS Code
+1. Open the project folder in your preferred IDE (e.g., Visual Studio Code).
+2. Ensure that your cars.csv dataset is saved in the same project folder.
+3. Open `ECE2112_PA3.ipynb`.
+4. Ensure your Python environment has the pandas library installed.
+5. Execute the cells from top to bottom.
+6. Ensure that your `cars.csv` dataset is saved in the exact same directory as your notebook.
+   
+
+
+
