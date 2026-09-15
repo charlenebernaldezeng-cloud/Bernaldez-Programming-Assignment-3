@@ -99,7 +99,7 @@ Bernaldez---Programming-Assignment-3/
 ## How to Run
 ### Using Terminal / Command Prompt
 1. Clone or download the repository to your local machine.
-2. 6. Ensure that your `cars.csv` dataset is saved in the exact same directory as your notebook.
+2. Ensure that your `cars.csv` dataset is saved in the exact same directory as your notebook.
 3. Open your terminal or command prompt and navigate to the project directory:
    ```bash
    git clone [https://github.com/charlenebernaldezeng-cloud/Bernaldez-Programming-Assignment-3.git](https://github.com/charlenebernaldezeng-cloud/Bernaldez-Programming-Assignment-3.git)
