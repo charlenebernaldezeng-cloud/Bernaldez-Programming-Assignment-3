@@ -109,7 +109,7 @@ Bernaldez---Programming-Assignment-3/
    ```bash
    jupyter notebook
 
-5. Open `ECE2112_PA1=3.ipynb` from the browser interface and run all cells sequentially (`Cell > Run All`).
+5. Open `ECE2112_PA3.ipynb` from the browser interface and run all cells sequentially (`Cell > Run All`).
 
 ### Using Jupyter Notebook / VS Code
 1. Open the project folder in your preferred IDE (e.g., Visual Studio Code).
