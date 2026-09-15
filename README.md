@@ -38,25 +38,48 @@ This repository features Python-based solutions for Experiment 3: Python Data An
 ### A. Positional and Label-Based Slicing
 * *Description:* Loads the dataset, displays the shape and column names, extracts rows 6 through 10 using positional slicing (`iloc`), and then displays specific columns (`Model`, `mpg`, `cyl`, `hp`, `gear`) using label-based indexing[cite: 1].
 
-  ```python
-  import pandas as pd
+      # Display shape of cars
+      print('Shape of cars: ')
+      cars = pd.read_csv('cars.csv')
+      print (cars.shape)
 
-  # Display shape of cars
-  print('Shape of cars: ')
-  cars = pd.read_csv('cars.csv')
-  print (cars.shape)
+      # Display the list of column names of cars
+      print('\nColumn names of cars:')
+      print(cars.columns.tolist()) 
 
-  # Display the list of column names of cars
-  print('\nColumn names of cars:')
-  print(cars.columns.tolist()) 
+      # Display rows 6 to 10
+      cars_6_to_10 = cars.iloc[5:10] 
+      print('\ncars rows 6 to 10:')
+      print(cars_6_to_10)
 
-  # Display rows 6 to 10
-  cars_6_to_10 = cars.iloc[5:10] 
-  print('\ncars rows 6 to 10:')
-  print(cars_6_to_10)
+      print('\nselected rows 6 to 10:')
+      print(cars_6_to_10[['Model', 'mpg', 'cyl', 'hp', 'gear']])
 
-  print('\nselected rows 6 to 10:')
-  print(cars_6_to_10[['Model', 'mpg', 'cyl', 'hp', 'gear']])
-  
- ```B. Model Lookup  Description: Uses Boolean indexing on the Model column to locate specific vehicles and extract their data into separate variables without using hard-coded row numbers[cite: 1].
+### B. Model Lookup
+* *Description:* Uses Boolean indexing on the Model column to locate specific vehicles and extract their data into separate variables without using hard-coded row numbers.
+
+      # Display complete row for Toyota Corolla
+      print('Toyota Corolla: ' )
+      toyota = cars[cars['Model'] == 'Toyota Corolla'] 
+      print (toyota)
+
+      # Display Model, mpg, hp, and wt of Pontiac Firebird
+      pontiac = cars.loc[cars['Model'] == 'Pontiac Firebird', ['Model', 'mpg', 'hp', 'wt']] 
+
+      print('\nPontiac Firebird:')
+      print(pontiac)
+
+### C. Multi-Model Subsetting
+* *Description:* Creates a new DataFrame containing only the records for Datsun 710, Lotus Europa, and Ferrari Dino. Retains only the columns Model, mpg, cyl, hp, and gear, and verifies the shape of the resulting subset.
+
+      # Select rows for the three specified car models 
+      selected_cars = cars[cars['Model'].isin(['Datsun 710', 'Lotus Europa', 'Ferrari Dino'])][['Model', 'mpg', 'cyl', 'hp', 'gear']]
+
+      # Display the selected cars
+      print(selected_cars) 
+
+      # Display the shape of the DataFrame
+      print('\nShape of selected_cars:') 
+      print(selected_cars.shape)
+
   
