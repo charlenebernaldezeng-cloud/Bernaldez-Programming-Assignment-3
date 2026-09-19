@@ -109,12 +109,12 @@ Bernaldez---Programming-Assignment-3/
    ```bash
    jupyter notebook
 
-5. Open `ECE2112_PA3.ipynb` from the browser interface and run all cells sequentially (`Cell > Run All`).
+5. Open `Bernaldez_Assignment_3.ipynb` from the browser interface and run all cells sequentially (`Cell > Run All`).
 
 ### Using Jupyter Notebook / VS Code
 1. Open the project folder in your preferred IDE (e.g., Visual Studio Code).
 2. Ensure that your cars.csv dataset is saved in the same project folder.
-3. Open `ECE2112_PA3.ipynb`.
+3. Open `Bernaldez_Assignment_3.ipynb`.
 4. Ensure your Python environment has the pandas library installed.
 5. Execute the cells from top to bottom.
 6. Ensure that your `cars.csv` dataset is saved in the exact same directory as your notebook.
